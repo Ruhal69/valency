@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Valencies</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #555 #333;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #333;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+        button {
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            width: 48%;
+        }
+        button:hover {
+            background-color: #00796b;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table-container h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="text-align: center;">Common Valencies</h2>
+    <button onclick="showFirstThirty()" style="float: left;">First Thirty</button>
+    <button onclick="showMoreCommon()" style="float: right;">More Common</button>
+
+    <div class="table-container" id="firstThirty">
+        <h3>First Thirty Elements</h3>
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Valency</th>
+            </tr>
+            <tr>
+                <td>Hydrogen</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>Helium</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Lithium</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>Beryllium</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>Boron</td>
+                <td>+3</td>
+            </tr>
+            <tr>
+                <td>Carbon</td>
+                <td>+4</td>
+            </tr>
+            <tr>
+                <td>Nitrogen</td>
+                <td>-3, +3, +5</td>
+            </tr>
+            <tr>
+                <td>Oxygen</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td>Fluorine</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>Neon</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Sodium</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>Magnesium</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>Aluminum</td>
+                <td>+3</td>
+            </tr>
+            <tr>
+                <td>Silicon</td>
+                <td>+4</td>
+            </tr>
+            <tr>
+                <td>Phosphorus</td>
+                <td>-3, +3, +5</td>
+            </tr>
+            <tr>
+                <td>Sulfur</td>
+                <td>-2, +4, +6</td>
+            </tr>
+            <tr>
+                <td>Chlorine</td>
+                <td>-1, +1, +3, +5, +7</td>
+            </tr>
+            <tr>
+                <td>Argon</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Potassium</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>Calcium</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>Scandium</td>
+                <td>+3</td>
+            </tr>
+            <tr>
+                <td>Titanium</td>
+                <td>+4, +3</td>
+            </tr>
+            <tr>
+                <td>Vanadium</td>
+                <td>+5, +4, +3, +2</td>
+            </tr>
+            <tr>
+                <td>Chromium</td>
+                <td>+6, +3, +2</td>
+            </tr>
+            <tr>
+                <td>Manganese</td>
+                <td>+7, +6, +4, +2</td>
+            </tr>
+            <tr>
+                <td>Iron</td>
+                <td>+3, +2</td>
+            </tr>
+            <tr>
+                <td>Cobalt</td>
+                <td>+2, +3</td>
+            </tr>
+            <tr>
+                <td>Nickel</td>
+                <td>+2, +3</td>
+            </tr>
+            <tr>
+                <td>Copper</td>
+                <td>+1, +2</td>
+            </tr>
+            <tr>
+                <td>Zinc</td>
+                <td>+2</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="table-container" id="moreCommon" style="display: none;">
+        <h3>More Common Elements</h3>
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Valency</th>
+            </tr>
+            <tr>
+                <td>Silver</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>Cadmium</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>Tin</td>
+                <td>+2, +4</td>
+            </tr>
+            <tr>
+                <td>Antimony</td>
+                <td>+3, +5</td>
+            </tr>
+            <tr>
+                <td>Barium</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>Mercury</td>
+                <td>+1, +2</td>
+            </tr>
+            <tr>
+                <td>Lead</td>
+                <td>+2, +4</td>
+            </tr>
+            <tr>
+                <td>Gold</td>
+                <td>+1, +3</td>
+            </tr>
+            <tr>
+                <td>Thallium</td>
+                <td>+1, +3</td>
+            </tr>
+            <tr>
+                <td>Bismuth</td>
+                <td>+3, +5</td>
+            </tr>
+            <tr>
+                <td>Uranium</td>
+                <td>+3, +4, +5, +6</td>
+            </tr>
+            <!-- Continue adding rows for more common elements -->
+        </table>
+    </div>
+</div>
+
+<script>
+    function showFirstThirty() {
+        document.getElementById("firstThirty").style.display = "block";
+        document.getElementById("moreCommon").style.display = "none";
+    }
+
+    function showMoreCommon() {
+        document.getElementById("firstThirty").style.display = "none";
+        document.getElementById("moreCommon").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
